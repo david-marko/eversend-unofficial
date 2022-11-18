@@ -1,14 +1,13 @@
 import requests
 
-class Eversend:
-    def __init__(self, clientId, clientSecret, version):
+class Eversend():
+    def __init__(self, clientId, clientSecret):
         """"
         Initialize Eversend Class by providing the ClientID and ClientSecret from your Business Account Settings
         """
         self.clientId = clientId
         self.clientSecret = clientSecret
-        self.version = version
-        self.base_url = 'https://api.eversend.com/v'+self.version
+        self.base_url = 'https://api.eversend.com/v1'
         self.token = None
         self.headers = {
             'clientId': self.clientId,
@@ -54,7 +53,7 @@ class Eversend:
         r = requests.post(url, json=payload, headers=self.token_header)
         return r.json()
 
-    def deactivate_wallet(self, wallet):
+    def activate_wallet(self, wallet):
         """
         Deactivate a specific wallet by the currency
         :param wallet: UGX, KES, USD, NGN
