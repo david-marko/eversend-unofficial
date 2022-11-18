@@ -17,7 +17,7 @@ class Eversend:
         self.get_token()
         if self.token:
             self.token_header = {
-                'Bearer '+self.token
+                "Authorization": 'Bearer '+self.token
             }
 
     def get_token(self):
