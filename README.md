@@ -5,7 +5,7 @@ A tiny library to connect and use the Eversend Business API
 
 ### Installation
 ```
-pip install eversend-sdk
+pip install eversend-api
 ```
 
 ### Get started
